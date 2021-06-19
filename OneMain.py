@@ -110,27 +110,6 @@ class Window(QMainWindow):
         other_picture.setGeometry(100, 100, 100, 100)
         other_picture.show()
 
-    # Расстановка сетки/ не работает
-    # def grid_picture(self):
-    #     grid = QGridLayout()
-    #     self.setLayout(grid)
-    #
-    #     names = ['Scan', 'reverse', '', 'exit',
-    #              '7', '8', '9', '/',
-    #              '4', '5', '6', '*',
-    #              '1', '2', '3', '-',
-    #              '0', '.', '=', '+']
-    #     positions = [(i, j) for i in range(5) for j in range(4)]
-    #
-    #     for position, name in zip(positions, names):
-    #         if name == '':
-    #             continue
-    #
-    #         button = QPushButton(name)
-    #         grid.addWidget(button, *position)
-    #
-    #     self.move(300, 150)
-    #     self.show()
 
     # Функция под вопросом.
     def clicked_btn(self):
@@ -156,9 +135,9 @@ class Window(QMainWindow):
                 # Список с информации по каждому устройству
             for device in usb_device_list:
                 all_device_set = {device}
-                    # Поверхностное копироние
+                # Поверхностное копироние
                 upgrade_all_device_set = set(all_device_set)
-                    # Разность множеств.
+                # Разность множеств.
                 check_device_set = all_device_set.difference(upgrade_all_device_set)
 
                 print(check_device_set)
