@@ -154,20 +154,20 @@ class Window(QMainWindow):
                     if device_in_set.open().getASCIIStringDescriptor(device_in_set.getProductDescriptor()) is None:
                         print('Продукт', device_in_set.getProductDescriptor())
 
-                        # print('Номер порта: {}\n'.format(device_in_set.getPortNumber()), \
-                        #       'Идентификатор  устройства: {}\n'.format(device_in_set.getProductID()), \
-                        #       'Расшифровка полученного: {}\n'.format(device_in_set.getProductDescriptor()), \
-                        #       'Тип устройства: {}\n'.format(
-                        #           device_in_set.open().getASCIIStringDescriptor(device_in_set.getProductDescriptor())), \
-                        #       'Расшифровка полученного: {}\n'.format(device_in_set.getManufacturerDescriptor()), \
-                        #       'Производитель: {}\n'.format(
-                        #           device_in_set.open().getASCIIStringDescriptor(device_in_set.getManufacturerDescriptor())), \
-                        #       'Идентификатор производителя : {}\n'.format(device_in_set.getVendorID()), \
-                        #       'Номер шины устройства: {}\n'.format(device_in_set.getBusNumber()), \
-                        #       'Адрес шины устройства: {}\n'.format(device_in_set.getDeviceAddress()), \
-                        #       '-' * 80,
-                        #       # 'test message: {}\n'.format(device_in_set.getStringDescriptor())
-                        #       )
+                        print('Номер порта: {}\n'.format(device_in_set.getPortNumber()), \
+                              'Идентификатор  устройства: {}\n'.format(device_in_set.getProductID()), \
+                              'Расшифровка полученного: {}\n'.format(device_in_set.getProductDescriptor()), \
+                              'Тип устройства: {}\n'.format(
+                                  device_in_set.open().getASCIIStringDescriptor(device_in_set.getProductDescriptor())), \
+                              'Расшифровка полученного: {}\n'.format(device_in_set.getManufacturerDescriptor()), \
+                              'Производитель: {}\n'.format(
+                                  device_in_set.open().getASCIIStringDescriptor(device_in_set.getManufacturerDescriptor())), \
+                              'Идентификатор производителя : {}\n'.format(device_in_set.getVendorID()), \
+                              'Номер шины устройства: {}\n'.format(device_in_set.getBusNumber()), \
+                              'Адрес шины устройства: {}\n'.format(device_in_set.getDeviceAddress()), \
+                              '-' * 80,
+                              # 'test message: {}\n'.format(device_in_set.getStringDescriptor())
+                              )
 
                 except Exception:
                     pass
